@@ -1,0 +1,30 @@
+{
+  "name": "dynamsoft-packaging",
+  "description": "Module that provides a installer site for Dynamsoft.",
+  "version": "0.0.0",
+  "main": "server/server.js",
+  "publishConfig": {
+    "registry": "https://npm.e1c.net"
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "e1c/es6/node",
+      "e1c/test/mocha",
+      "e1c/test/chai"
+    ]
+  },
+  "scripts": {
+    "start": "node server/server.js",
+    "container": "node server/server.js",   
+    "develop": "NODE_ENV=development LOG_LEVEL=* node_modules/.bin/nodemon server/server.js",
+    "docker-build": "bin/build.sh"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
